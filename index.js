@@ -258,13 +258,11 @@ export default class Camera extends Component {
   }
 
   freezeCapture(){
-    if (Platform.OS === 'ios') 
-      return CameraManager.freezeCapture();
+    return CameraManager.freezeCapture();
   }
 
   unfreezeCapture(){
-    if (Platform.OS === 'ios')
-      return CameraManager.unfreezeCapture();
+    return CameraManager.unfreezeCapture();
   }
 
   addObserver(handler){
