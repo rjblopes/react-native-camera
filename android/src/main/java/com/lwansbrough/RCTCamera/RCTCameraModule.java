@@ -654,7 +654,7 @@ public class RCTCameraModule extends ReactContextBaseJavaModule
     }
 
     @ReactMethod
-    public void freezeCapture() {
+    public void unfreezeCapture() {
         mCamera.startPreview();
     }
 
