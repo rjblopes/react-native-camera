@@ -649,6 +649,16 @@ public class RCTCameraModule extends ReactContextBaseJavaModule
     }
 
     @ReactMethod
+    public void freezeCapture() {
+        mCamera.stopPreview();
+    }
+
+    @ReactMethod
+    public void unfreezeCapture() {
+        mCamera.startPreview();
+    }
+
+    @ReactMethod
     public void stopCapture(final Promise promise) {
         if (mRecordingPromise != null) {
             releaseMediaRecorder(); // release the MediaRecorder object
